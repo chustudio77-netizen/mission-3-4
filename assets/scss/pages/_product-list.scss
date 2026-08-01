@@ -1,0 +1,142 @@
+/* ========== Page ========== */
+.page {
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 30px 0 28px 0;
+  }
+}
+.layout {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 72px;
+
+  @include mobile {
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+}
+
+/* ========== Category Navigation ========== */
+.category-nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    font-weight: 500;
+
+    @include mobile {
+      flex-direction: row;
+      gap: 12px;
+
+      &:not(.list) {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    padding: 12px 0;
+    color: $neutral-color;
+    @include transition;
+
+    &:hover,
+    &.active {
+      color: $primary-color;
+    }
+  }
+
+}
+.content {
+  flex: 0.9;
+  min-width: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+}
+
+
+/* ========== Product Card ========== */
+.product-card {
+  a {
+    &:hover .product-image img {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+  }
+  &.show-only-sm{
+    display: none;
+     @include mobile {
+    display:block
+  }
+  }
+}
+
+.product-image {
+  overflow: hidden;
+
+  img {
+
+    aspect-ratio: 1/1;
+    @include transition;
+  }
+}
+
+.product-name {
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.product-price {
+  padding: 8px 0 0;
+  font-weight: 500;
+}
+
+/* ========== Pagination ========== */
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 48px;
+}
+
+.page-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    flex: 1;
+    justify-content: space-around
+  }
+}
+
+.pagination {
+
+  a,
+  .ellipsis {
+    box-sizing: border-box;
+    @include flex-center;
+    background: transparent;
+    margin: 0 4px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    @include transition;
+
+    &:hover,
+    &.active {
+      background-color: $highlight-green;
+      font-weight: 500;
+    }
+  }
+}

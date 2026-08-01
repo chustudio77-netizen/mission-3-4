@@ -1,0 +1,409 @@
+
+/* ========== Banner ========== */
+.banner {
+  max-width: 1920px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.banner-content {
+  position: absolute;
+  left: 7%;
+  top: 28%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 10;
+  color: #FFF;
+  letter-spacing: 5%;
+
+
+  h1 {
+    font-size: clamp(48px, 8vw, 64px);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 700;
+    letter-spacing: 7%;
+  }
+
+  a {
+    display: block;
+    padding: 16px 20px;
+    color: $neutral-color;
+    background-color: $highlight-green;
+    font-weight: 500;
+    width: fit-content;
+    @include transition;
+    border-radius: 4px;
+    margin-top: 18px;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+
+}
+
+
+.index {
+  padding: 36px 0;
+
+  &.new {
+    padding-top: 52px;
+  }
+
+  @include mobile {
+    padding: 24px 0;
+  }
+}
+
+
+
+.index-title {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
+
+.index-sub-title {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  padding: 30px 0;
+
+  &.new {
+    text-align: center;
+  }
+
+  @include mobile {
+    padding: 18px 0;
+  }
+}
+
+.index-new-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.index-new-price {
+  font-weight: 500;
+}
+
+/* ========== Index New ========== */
+.index-new {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 24px;
+  padding-top: 12px;
+
+}
+
+.index-new-card {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  @include transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+
+
+}
+
+.index-hot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+
+  @include mobile {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  a {
+    position: relative;
+    @include transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      flex-shrink: 0;
+      width: 300px;
+      height: 300px;
+      scroll-snap-align: center;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  img {
+
+    aspect-ratio: 1 / 1;
+  }
+
+  a::before {
+    content: "人氣 NO.1";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: $primary-color;
+    background-color: $light-bg;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    z-index: 10;
+  }
+}
+
+/* ========== Co-brand ========== */
+.index {
+  &.co {
+    padding-top: 56px;
+  }
+
+}
+
+.co-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  a {
+    display: inline-block;
+    padding: 16px 20px;
+    color: #000;
+    background-color: $highlight-green;
+    text-decoration: none;
+    font-weight: 500;
+    width: fit-content;
+    @include transition;
+    border-radius: 4px;
+    margin-top: 24px;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    a {
+      margin-top: 0;
+    }
+  }
+}
+
+.co-brand-info {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 8%;
+  }
+
+  span {
+    color: $highlight-green;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 7%;
+  }
+
+  h4 {
+    font-size: 20px;
+    opacity: 0.7;
+    padding: 20px;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: no-repeat center/cover url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week3-4/star.svg");
+    width: 60px;
+    height: 60px;
+    top: -16%;
+    left: -12%;
+    z-index: 2;
+  @include mobile {
+     left: 5%;
+  }
+
+  }
+
+  @include mobile {
+    gap: 24px;
+
+    h2 {
+      font-size: clamp(32px, 6vw, 48px);
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    h3 {
+      font-size: clamp(20px, 4vw, 32px);
+    }
+
+    h4 {
+      font-size: clamp(16px, 2vw, 20px);
+      line-break: normal;
+      padding: 0 48px 12px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: no-repeat center/cover url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week3-4/sparkle.svg");
+    width: 142px;
+    height: 128px;
+    bottom: -4%;
+    right: -12%;
+    z-index: 2;
+  }
+}
+
+/* ========== Index Series ========== */
+.index-series {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+
+  @include mobile {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  img {
+
+    aspect-ratio: 1 / 1;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.series-card {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: $neutral-color;
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+
+
+  &:hover h3 {
+    color: $highlight-green;
+    @include transition;
+  }
+}
+
+.series-info {
+  position: absolute;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: clamp(20px, 4vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+
+
+/* ========== Wallpaper/Inspiration ========== */
+.wallpaper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 8px;
+
+
+
+  @media (max-width:$mobile) {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    img {
+      width: 300px;
+
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
+
+
+
+}
+
+.big-b {
+  grid-area: 1 / 5 / 3 / 7;
+}
+
+.big-a {
+  grid-area: 2 / 1 / 4 / 3;
+}

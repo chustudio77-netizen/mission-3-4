@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鞋子電商</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  
+
+
+
+</head>
+
+<body>
+   <%- include('./layout/header'); -%>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">首頁</a>
+            <span class="sep">/</span>
+            <span class="current">所有商品</span>
+        </div>
+        <div class="page">
+            <h1>所有商品</h1>
+        </div>
+
+        <div class="layout">
+
+
+            <nav class="category-nav list">
+                <ul>
+                    <li><a href="#" class="active">所有商品</a></li>
+                    <li><a href="#">慢跑鞋</a></li>
+                    <li><a href="#">滑板鞋</a></li>
+                    <li><a href="#">厚底鞋</a></li>
+                    <li><a href="#">限定 / 聯名企劃</a></li>
+                </ul>
+            </nav>
+
+            <main class="content">
+                <div class="grid">
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-9.png" alt=""></div>
+                            <h3 class="product-name">PLATFORM 404</h3>
+                            <p class="product-price">NT$2,600</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-1.png" alt=""></div>
+                            <h3 class="product-name">PLATFORM 404</h3>
+                            <p class="product-price">NT$2,600</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-2.png" alt=""></div>
+                            <h3 class="product-name">VM001</h3>
+                            <p class="product-price">NT$2,600</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-3.png" alt=""></div>
+                            <h3 class="product-name">Melty Kiss</h3>
+                            <p class="product-price">NT$4,000</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-4.png" alt=""></div>
+                            <h3 class="product-name">BOOMBLOK</h3>
+                            <p class="product-price">NT$3,200</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-5.png" alt=""></div>
+                            <h3 class="product-name">BOOMBLOK</h3>
+                            <p class="product-price">NT$3,200</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-6.png" alt=""></div>
+                            <h3 class="product-name">R:UNER</h3>
+                            <p class="product-price">NT$4,000</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-7.png" alt=""></div>
+                            <h3 class="product-name">Sugar Snap</h3>
+                            <p class="product-price">NT$4,000</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-8.png" alt=""></div>
+                            <h3 class="product-name">Neofoam</h3>
+                            <p class="product-price">NT$4,000</p>
+
+                        </a>
+                    </div>
+                    <div class="product-card show-only-sm">
+                        <a href="product-detail.html">
+                            <div class="product-image"><img src="../assets/scss/images/product-7.png" alt=""></div>
+                            <h3 class="product-name">Sugar Snap</h3>
+                            <p class="product-price">NT$4,000</p>
+
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="pagination" aria-label="頁碼導覽">
+                    <a href="#" class="page-arrow" aria-label="上一頁"><i class="bi bi-chevron-left"></i></a>
+                    <ul class="page-list">
+                        <li class="page-item"><a href="#" class="active" aria-current="page">1</a></li>
+                        <li class="page-item"><a href="#">2</a></li>
+                        <li class="page-item"><a href="#">3</a></li>
+                        <li class="page-item"><span class="ellipsis">...</span></li>
+                        <li class="page-item"><a href="#">10</a></li>
+                    </ul>
+                    <a href="#" class="page-arrow" aria-label="下一頁"><i class="bi bi-chevron-right"></i></a>
+                </nav>
+            </main>
+        </div>
+    </div>
+       <%- include('./layout/footer'); -%>
+<script type="module" src="../main.js"></script>
+</body>
+
+
+</html>
