@@ -1,9 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* ========== 變數定義 ========== */
 $primary-color: #57A203;
+$primary-color-100: #F5FEE7;
 $secondary-color: #E8FEC5;
 $neutral-color: #212529;
 $light-gray: #6C757D;
@@ -31,6 +31,7 @@ $mobile: 992px;
   align-items: center;
   justify-content: center;
 }
+
 @mixin mobile {
   @media (max-width: $mobile) {
     @content;
@@ -58,10 +59,47 @@ h2 {
 .container {
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0 12px;
+}
+
+.row {
+  display: flex;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.row-column{
+  flex-direction: column;
+}
 
 
+.col-1{
+  padding-left: 12px;
+  padding-right: 12px;
+  width: calc(100% / 12);
+}
+.col-6{
+  width: calc(100% / 12 * 6);
+}
+.col-12{
+  width: calc(100% / 12 * 12);
+}
+.col-sm-12{
   @include mobile {
-    padding: 0 12px;
+    width: calc(100% / 12 * 12);
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  
+	/* 手機版格線系統總共是 4 欄、gap 為 12px */
+  .col-sm-1 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(100% / 4);
   }
 }
 @import './layout/header.scss';
@@ -97,7 +135,9 @@ h2 {
   }
 
 }
+
 @import './pages/index.scss';
 @import './pages/product-list.scss';
 @import './pages/product-detail.scss';
 @import './pages/brand_store.scss';
+@import './pages/favorites.scss';
