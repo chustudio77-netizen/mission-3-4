@@ -111,7 +111,7 @@ section {
 body {
   line-height: 1;
   font-family: "Noto Sans", sans-serif;
-  letter-spacing: 3%;
+  letter-spacing: 5%;
 }
 
 a {
@@ -161,13 +161,51 @@ h2 {
 .container {
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0 12px;
 }
+
+.row {
+  display: flex;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.row-column {
+  flex-direction: column;
+}
+
+.col-1 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 8.3333333333%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
 @media (max-width: 992px) {
-  .container {
-    padding: 0 12px;
+  .col-sm-12 {
+    width: 100%;
   }
 }
 
+@media (max-width: 576px) {
+  .row {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  /* 手機版格線系統總共是 4 欄、gap 為 12px */
+  .col-sm-1 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 25%;
+  }
+}
 header {
   max-width: 100%;
 }
@@ -1048,7 +1086,6 @@ footer .container {
   padding: 12px 24px;
   width: 100%;
   border-radius: 4px;
-  letter-spacing: 0.05em;
   font-size: 16px;
   font-weight: 500;
   transition: 0.3s;
@@ -1260,4 +1297,89 @@ footer .container {
 .store-article p {
   font-size: 16px;
   line-height: 1.7;
+}
+
+.favorites {
+  max-width: 50%;
+  padding: 4rem 0;
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .favorites {
+    max-width: 100%;
+  }
+}
+.favorites h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  color: #212529;
+}
+.favorites h1 i {
+  color: #57A203;
+}
+.favorites .hours {
+  padding: 1rem;
+  font-weight: 500;
+  letter-spacing: 7%;
+  color: #57A203;
+  background-color: #F5FEE7;
+  display: flex;
+  align-items: center;
+}
+.favorites .hours i {
+  margin-right: 0.5rem;
+}
+@media (max-width: 992px) {
+  .favorites .hours span {
+    display: block;
+  }
+}
+.favorites .wishlist .col {
+  display: flex;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.favorites .wishlist .col:first-child {
+  padding-top: 1rem;
+}
+.favorites .wishlist .col img {
+  width: 120px;
+}
+.favorites .wishlist .col {
+  border-bottom: 1px #DEE2E6 solid;
+}
+.favorites .wishlist .text {
+  display: flex;
+  gap: 0.5rem;
+  color: #212529;
+  width: 100%;
+}
+.favorites .wishlist .text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.favorites .wishlist .text p {
+  color: #6C757D;
+}
+.favorites .wishlist .text p span {
+  font-weight: 500;
+  color: #212529;
+}
+.favorites .wishlist .price {
+  font-weight: 700;
+  align-self: flex-end;
+}
+@media (max-width: 992px) {
+  .favorites .wishlist .price {
+    align-self: flex-start;
+  }
+}
+.favorites .detail_cta button {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }/*# sourceMappingURL=all.css.map */

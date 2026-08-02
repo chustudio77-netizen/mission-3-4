@@ -1,0 +1,103 @@
+.favorites {
+  max-width: calc(100%/12*6);
+  padding: 4rem 0;
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-direction: column;
+
+
+  @include mobile {
+    max-width: calc(100% / 12 * 12);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: $neutral-color;
+
+    i {
+      color: $primary-color;
+    }
+  }
+
+  .hours {
+    padding: 1rem;
+    font-weight: 500;
+    letter-spacing: 7%;
+    color: $primary-color;
+    background-color: $primary-color-100;
+    display: flex;
+
+    align-items: center;
+     i {
+      margin-right: 0.5rem;
+    }
+
+    @include mobile {
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .wishlist {
+
+    .col {
+      display: flex;
+      padding: 2rem 0;
+      gap: 1rem;
+
+      &:first-child {
+        padding-top: 1rem;
+      }
+
+      img {
+        width: 120px;
+      }
+
+      border-bottom: 1px #DEE2E6 solid;
+    }
+
+    .text {
+      display: flex;
+      gap: 0.5rem;
+      color: $neutral-color;
+      width: 100%;
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      p {
+        color: $light-gray;
+
+        span {
+          font-weight: 500;
+          color: $neutral-color;
+        }
+      }
+
+
+
+    }
+
+    .price {
+      font-weight: 700;
+      align-self: flex-end;
+
+      @include mobile {
+        align-self: flex-start;
+      }
+    }
+
+  }
+
+  .detail_cta button {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+}
