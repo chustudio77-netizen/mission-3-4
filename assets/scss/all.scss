@@ -6,6 +6,7 @@ $primary-color: #57A203;
 $primary-color-100: #F5FEE7;
 $secondary-color: #E8FEC5;
 $neutral-color: #212529;
+$neutral-color-600:#798797;
 $light-gray: #6C757D;
 $border-color: #DEE2E6;
 $light-bg: #F5FEE7;
@@ -77,8 +78,14 @@ h2 {
   padding-right: 12px;
   width: calc(100% / 12);
 }
+.col-5{
+  width: calc(100% / 12 * 5);
+}
 .col-6{
   width: calc(100% / 12 * 6);
+}
+.col-7{
+  width: calc(100% / 12 * 7);
 }
 .col-12{
   width: calc(100% / 12 * 12);
@@ -88,6 +95,8 @@ h2 {
     width: calc(100% / 12 * 12);
   }
 }
+
+
 
 @media (max-width: 576px) {
   .row {
@@ -141,3 +150,5 @@ h2 {
 @import './pages/product-detail.scss';
 @import './pages/brand_store.scss';
 @import './pages/favorites.scss';
+@import './pages/login.scss';
+

@@ -14,52 +14,58 @@
 <body>
 
     <%- include('./layout/header'); -%>
+        <img class="d-sm-none " src="../assets/scss/images/2025-week3-4/login-sm.png" alt="">
         <div class="container ">
-            <div class="favorites ">
-                <h1><i class="bi bi-check-circle-fill"></i> 我的收藏</h1>
-                <div class="hours">
-                    <i class="bi bi-truck"></i><span> 門市營業時間：<span>週一至週五 10:00 - 22:00</span></span>
+            <div class="login row ">
+                <div class="col-5 col-sm-12 ">
+                    <div class="login-img">
+
+                        <img class=" d-lg-block d-none "
+                            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/login.png?raw=true"
+                            alt="">
+                    </div>
                 </div>
+                <div class=" col-7 col-sm-12">
+                    <div class="login-page">
+                        <h1>歡迎!</h1>
+                        <nav>
+                            <div class="w-100 flex-nowrap nav nav-tabs " id="nav-tab" role="tablist">
+                                <button class="w-100 nav-link active "  id="nav-home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">登入</button>
+                                <button class="w-100 nav-link " id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">註冊</button>
 
-                <div class=" wishlist ">
-                    <div class="col ">
-                        <img src="../assets/scss/images/product.png" alt="">
-                        <div class="text row-column ">
-                            <h3>PLATFORM 404</h3>
-                            <p>尺寸 <span>38</span></p>
-                            <p>顏色 <span>NAVY</span></p>
-                            <div class="price">NT$2,600</div>
+                            </div>
+                        </nav>
+                        <div class="tab-content login-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+                                <ul>
+                                    <li><a href=""><img src="../assets/scss/images/2025-week3-4/facebook.svg"
+                                                alt="登入圖示1"> Facebook 登入 </a></li>
+                                    <li><a href=""><img src="../assets/scss/images/2025-week3-4/apple.svg" alt="登入圖示2">
+                                            Apple 登入 </a></li>
+                                    <li><a href=""><img src="../assets/scss/images/2025-week3-4/google.svg" alt="登入圖示3">
+                                            Google 登入 </a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <ul>
+                                    <li><a href=""><img src="../assets/scss/images/2025-week3-4/facebook.svg"
+                                                alt="登入圖示1"> Facebook 註冊 </a></li>
+                                    <li><a href=""><img src="../assets/scss/images/2025-week3-4/apple.svg" alt="登入圖示2">
+                                            Apple 註冊 </a></li>
+                                    <li><a href=""><img src="../assets/scss/images/2025-week3-4/google.svg" alt="登入圖示3">
+                                            Google 註冊 </a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="col">
-                        <img src="../assets/scss/images/product-4.png" alt="">
-                        <div class="text row-column">
-                            <h3>BOOMLOK</h3>
-                            <p>尺寸 <span>38</span></p>
-                            <p>顏色 <span>White</span></p>
-
-
-                            <div class="price">NT$2,600</div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <img src="../assets/scss/images/product-3.png" alt="">
-                        <div class="text row-column">
-                            <h3>MELTY KISS</h3>
-                            <p>尺寸 <span>38</span></p>
-                            <p>顏色 <span>Violet</span></p>
-                            <div class="price">NT$2,600</div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="detail_cta">
-
-                    <button class="dark">立即預約門市試穿</button>
                 </div>
             </div>
         </div>
@@ -67,7 +73,7 @@
         <%- include('./layout/footer'); -%>
 
             <script type="module" src="../main.js"></script>
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

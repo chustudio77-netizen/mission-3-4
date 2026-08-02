@@ -58,6 +58,14 @@
         font-weight: 700;
         color: #57A203;
       }
+      p {
+       display: flex;
+       flex-direction: column;
+        text-align: center;
+        @include mobile {
+         display: block;
+        }
+      }
     }
   }
 

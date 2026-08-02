@@ -1,0 +1,96 @@
+.login {
+  padding: 4rem 0;
+
+  @include mobile {
+
+    padding: 2rem 0;
+  }
+
+  .login-img {
+    max-height: 589px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 1rem;
+
+    img {
+      transform: translateY(-5%);
+    }
+
+  }
+}
+
+.login-page {
+  // background-color: #F5FEE7;
+  color: $neutral-color;
+  width: 100%;
+  border-radius: 1rem;
+  background: url('./images/2025-week3-4/login-bg.png') center/cover no-repeat;
+  min-height: 589px;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  nav {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    color: $neutral-color;
+
+  }
+
+
+  .nav-tabs .nav-link {
+    border: none;
+    border-radius: 0rem;
+    padding-bottom: 0.75rem;
+    color: $neutral-color-600 ;
+    background: none;
+
+    &:hover {
+      color: $neutral-color;
+    }
+
+    &.active {
+      color: $neutral-color;
+      border-bottom: 2px solid $neutral-color;
+    }
+  }
+
+  @include mobile {
+    background: none;
+    padding: 0;
+    min-height: auto;
+  }
+
+
+}
+
+.login-content {
+
+  ul {
+     
+       a {
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 12px 0;
+        padding: 0.75rem;
+        background-color: #FFF;
+        border: 1px solid #DEE2E6;
+        border-radius: 0.25rem;
+        @include transition;
+        &:hover {
+        
+           background-color: #DEE2E6;
+        }
+      }
+  
+  }
+}
